@@ -13,6 +13,9 @@ bindsym $mod+d exec rofi -show drun
 # File Manager
 bindsym $mod+e exec thunar
 
+# Pico 8
+bindsym $mod+p exec pico8 -windowed 1 -width 640 -height 640
+
 # Kill window
 bindsym $mod+Shift+q kill
 
