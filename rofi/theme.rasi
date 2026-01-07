@@ -1,0 +1,117 @@
+* {
+  bg:        #141216;
+  bg2:       #27232b;
+  fg:        #d8cab8;
+  accent:    #AC82E9;
+  accent2:   #8F56E1;
+  red:       #fc4649;
+  green:     #c4e881;
+  blue:      #7b91fc;
+  cyan:      #92fcfa;
+  yellow:    #f3fc7b;
+
+  background-color: transparent;
+  text-color: @fg;
+}
+
+window {
+  location: center;
+  width: 46%;
+  border: 2px;
+  border-color: @accent;
+  background-color: @bg;
+  padding: 12px;
+}
+
+mainbox {
+  background-color: transparent;
+}
+
+inputbar {
+  background-color: @bg;
+  text-color: @fg;
+  padding: 8px;
+  border: 1px;
+  border-color: @bg2;
+}
+
+prompt {
+  text-color: @accent;
+  background-color: transparent;
+}
+
+textbox-prompt-colon {
+  text-color: @accent2;
+  background-color: transparent;
+  expand: false;
+  str: ":";
+}
+
+entry {
+  background-color: transparent;
+  text-color: @fg;
+  placeholder: "buscar…";
+  placeholder-color: @bg2;
+}
+
+listview {
+  background-color: @bg;
+  padding: 6px;
+  lines: 10;
+  spacing: 6px;
+  border: 1px;
+  border-color: @bg2;
+}
+
+element {
+  padding: 6px 8px;
+  border-radius: 6px;
+  background-color: transparent;
+}
+
+element normal.normal {
+  background-color: transparent;
+  text-color: @fg;
+}
+element normal.active {
+  background-color: transparent;
+  text-color: @cyan;
+}
+element normal.urgent {
+  background-color: transparent;
+  text-color: @red;
+}
+
+element selected.normal {
+  background-color: @bg2;
+  text-color: @accent;
+}
+element selected.active {
+  background-color: @bg2;
+  text-color: @cyan;
+}
+element selected.urgent {
+  background-color: @bg2;
+  text-color: @red;
+}
+
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+}
+
+element-icon {
+  background-color: transparent;
+  size: 0px;
+}
+
+message {
+  background-color: @bg;
+  border: 1px;
+  border-color: @bg2;
+  padding: 8px;
+}
+textbox {
+  background-color: transparent;
+  text-color: @fg;
+}

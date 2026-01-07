@@ -1,0 +1,7 @@
+configuration {
+  font: "Maple Mono 10";
+  modi: "drun,run";
+  show-icons: false;
+}
+
+@theme "~/.config/rofi/theme.rasi"

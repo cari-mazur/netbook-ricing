@@ -1,0 +1,36 @@
+general {
+  colors = true
+  interval = 2
+}
+
+order += "cpu_usage"
+order += "memory"
+order += "disk /"
+order += "wireless _first_"
+order += "battery all"
+order += "tztime local"
+
+cpu_usage {
+  format = " CPU %usage "
+}
+
+memory {
+  format = " RAM %used/%total "
+}
+
+disk "/" {
+  format = " SSD %avail "
+}
+
+wireless _first_ {
+  format_up = " WIFI %quality "
+  format_down = " NO-WIFI "
+}
+
+battery all {
+  format = " BAT %percentage "
+}
+
+tztime local {
+  format = " %H:%M "
+}

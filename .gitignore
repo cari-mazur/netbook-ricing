@@ -1,0 +1,13 @@
+*.swp
+*.swo
+*~
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+.nvim/
+.cache/
+secrets/
+.env
+.env.*
+*.key

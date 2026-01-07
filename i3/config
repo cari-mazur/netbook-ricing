@@ -1,0 +1,72 @@
+# i3 config — HP Mini 210
+
+set $mod Mod4
+font pango:Maple Mono 10
+
+# Terminal
+set $terminal xfce4-terminal
+bindsym $mod+Return exec $terminal
+
+# Launcher (rofi)
+bindsym $mod+d exec rofi -show drun
+
+# File Manager
+bindsym $mod+e exec thunar
+
+# Kill window
+bindsym $mod+Shift+q kill
+
+# Reload / Restart
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+
+# Focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# Move windows
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# Layouts
+bindsym $mod+v split v
+bindsym $mod+b split h
+bindsym $mod+f fullscreen toggle
+
+# Workspaces
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+
+# Bar
+bar {
+    status_command i3status -c ~/.config/i3status/config
+    position bottom
+    colors {
+        background #141216
+        statusline #d8cab8
+        separator  #27232b
+
+        focused_workspace  #AC82E9 #AC82E9 #141216
+        inactive_workspace #27232b #27232b #d8cab8
+        urgent_workspace   #fc4649 #fc4649 #141216
+    }
+}
+
+# Wallpaper (XP style)
+exec_always --no-startup-id feh --bg-fill "$HOME/dev/netbook-ricing/wallpapers/bliss.jpg"
+
+# Picom
+exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
